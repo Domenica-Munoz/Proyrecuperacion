@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16140439944370" configfile="/ProyectoDeRecuperacion/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="menupricp.xhtml" id="pf16140440604451" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16140441236446 pf16140441361798" path="/loguin.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Comentarios.xhtml" id="pf16140441236447" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16140441236446" path="/Comentarios.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="crearCliente.xhtml" id="pf16140441361799" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf16140441361798" path="/crearCliente.xhtml"/>
+  <links id="pf16140441236446" target="pf16140441236447" source="pf16140440604451" outcome="inicio"/>
+  <links id="pf16140441361798" target="pf16140441361799" source="pf16140440604451" outcome="crear"/>
+</pageflow:Pageflow>

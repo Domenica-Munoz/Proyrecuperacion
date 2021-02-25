@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:a="http://primefaces.org/ui"
+    xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+    >
+<h:head>
+    <title>Crear Cliente</title>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/proyectoRecuperacion/assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="/proyectoRecuperacion/assets/img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Bodegas</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <!-- CSS Files -->
+	<link href="/proyectoRecuperacion/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/proyectoRecuperacion/assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+</h:head>
+<h:body>
+    <h3>Comentarios</h3>
+    <div id="contenedorComentarios">
+        <h:form id="formComentarios">
+        	<h:commandButton class="btn btn-primary btn-block" value="Inicio" action="#{navigator.reglaRedir('Inicio')}" />
+        	<a:inputText id="nombre" class="form-control" value="#{comentariosBean.nombre}"/>
+        	<h:commandButton class="btn btn-primary btn-block" value="Inicio" action="#{comentariosBean.agregarComentario()}" />
+            <a:dataTable id="tablaComentarios" value="#{comentariosBean.comentarios}" var="com" styleClass="tabla" headerClass="cabeceraTabla" rowClasses="filaPar,filaImpar">
+                <a:column>
+                    <f:facet name="header" id="proid">Cliente</f:facet>#{com.cliente.nombre} #{com.cliente.apellido}
+                </a:column>
+                <a:column>
+                    <f:facet name="header" id="proid">Comentario</f:facet>#{com.comentario}
+                </a:column>
+            </a:dataTable>
+        </h:form>
+    </div>
+</h:body>
+</html>
